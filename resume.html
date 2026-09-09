@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Joshua Song</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ============================================================
+       Extra styles just for this richer resume page.
+       (Kept here so the other pages are untouched.)
+       ============================================================ -->
+  <style>
+    .bio { font-size: 1.14rem; line-height: 1.6; max-width: 66ch; margin: 18px 0 0; }
+    .contactbar {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 10px 20px; margin-top: 24px; padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.96rem;
+    }
+    .contactbar a { color: var(--muted); }
+    .contactbar a:hover { color: var(--accent); }
+    .contactbar .dot { color: var(--line); }
+    .contactbar .grow { flex: 1; }
+
+    /* Grouped skills — clearer than one long row of pills */
+    .skill-group { display: grid; grid-template-columns: 200px 1fr; gap: 8px 24px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .skill-group:last-child { border-bottom: 0; }
+    .skill-group .label { font-weight: 600; color: var(--ink); }
+    .skill-group .val { color: var(--muted); }
+
+    /* Small "tools used" tags under a project */
+    .toolrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .toolrow span {
+      background: var(--wash); border: 1px solid var(--line);
+      border-radius: 999px; padding: 4px 12px;
+      font-size: 0.8rem; color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .skill-group { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
+      .skill-group .label { margin-top: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">Joshua Song</a>
+      <div class="links">
+        <a href="index.html">About</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HEADER + BIO ============ -->
+  <header class="wrap" style="padding-top:52px">
+    <p class="eyebrow">Resume</p>
+    <h1>Joshua Song</h1>
+    <p class="muted" style="font-size:1.1rem; margin:2px 0 0">
+      Aerospace Engineering Student · Toronto Metropolitan University
+    </p>
+
+    <!-- EDIT: your bio / intro -->
+    <p class="bio">
+      I'm a third-year Aerospace Engineering student who likes to design
+      things and then actually build them. My work runs from competition
+      rocketry and CFD-driven drone design to hands-on metal fabrication —
+      and, outside of engineering, running my own e-commerce business from
+      end to end. I'm looking for a Summer 2027 engineering internship where
+      I can turn CAD and analysis into real, working hardware.
+    </p>
+
+    <!-- EDIT: your contact + links. Add your real LinkedIn URL. -->
+    <div class="contactbar">
+      <a href="mailto:song.joshua06@gmail.com">song.joshua06@gmail.com</a>
+      <span class="dot">·</span>
+      <a href="tel:6477404966">647-740-4966</a>
+      <span class="dot">·</span>
+      <span>Toronto, ON</span>
+      <span class="dot">·</span>
+      <a href="#">LinkedIn</a>
+      <span class="grow"></span>
+      <a class="btn ghost no-print" href="javascript:window.print()">Download / print</a>
+    </div>
+  </header>
+
+  <section class="wrap">
+
+    <!-- ============ EDUCATION ============ -->
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="when">2024 — 2029</div>
+      <div>
+        <h3>B.Eng., Aerospace Engineering</h3>
+        <div class="org">Toronto Metropolitan University · Toronto, ON</div>
+        <ul>
+          <li>Currently in third year; expected graduation 2029.</li>
+          <!-- EDIT: swap in the courses you've actually taken -->
+          <li>Relevant coursework: Thermodynamics, Fluid Mechanics, Solid
+              Mechanics, Engineering Design, Programming for Engineers.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ SKILLS ============ -->
+    <h2 style="margin-top:40px">Technical Skills</h2>
+    <div style="border-top:1px solid var(--line); margin-top:8px">
+      <div class="skill-group">
+        <div class="label">CAD &amp; Design</div>
+        <div class="val">SolidWorks, CATIA, Onshape — parts, assemblies, and GD&amp;T engineering drawings</div>
+      </div>
+      <div class="skill-group">
+        <div class="label">Simulation &amp; Analysis</div>
+        <div class="val">CFD for drag and airflow optimization; OpenRocket &amp; RASAero for flight simulation, stability, and thrust-curve analysis</div>
+      </div>
+      <div class="skill-group">
+        <div class="label">Programming</div>
+        <div class="val">C and MATLAB — matrix operations, regression, data visualization, and engineering automation scripts</div>
+      </div>
+      <div class="skill-group">
+        <div class="label">Fabrication</div>
+        <div class="val">Manual &amp; production machining, soldering, metal assembly, and dimensional inspection to tolerance</div>
+      </div>
+      <div class="skill-group">
+        <div class="label">Tools &amp; Other</div>
+        <div class="val">Microsoft Excel (INDEX-MATCH, pivot tables, budget modeling), WordPress &amp; front-end prototyping</div>
+      </div>
+    </div>
+
+    <!-- ============ PROJECTS ============ -->
+    <h2 style="margin-top:44px">Projects</h2>
+
+    <div class="entry">
+      <div class="when">2024 — Present</div>
+      <div>
+        <h3>Rocket Airframe — TMU MARS Rocketry Team</h3>
+        <div class="org">Competition rocketry design team</div>
+        <ul>
+          <li>Designed the competition airframe geometry, fin profiles, and
+              structural components in SolidWorks, turning requirements into a
+              manufacturable, flight-ready vehicle.</li>
+          <li>Validated the design before fabrication by running OpenRocket
+              simulations of flight trajectory, stability margins, and thrust
+              curves, iterating until stability targets were met.</li>
+          <li>Collaborated across the design, propulsion, and recovery
+              sub-teams to integrate every subsystem into one unified vehicle.</li>
+          <li>Authored detailed engineering drawings and assembly documentation
+              that carried the design cleanly into fabrication and met all
+              competition submission requirements.</li>
+        </ul>
+        <div class="toolrow">
+          <span>SolidWorks</span><span>OpenRocket</span><span>Engineering drawings</span><span>Teamwork</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2026 — Present</div>
+      <div>
+        <h3>Prototype Quadcopter &amp; CFD Aerodynamic Redesign</h3>
+        <div class="org">Personal project · In progress</div>
+        <ul>
+          <li>Designing a payload-carrying quadcopter from the ground up in CAD,
+              handling the airframe modelling, electronics layout, and assembly
+              planning — the design is still being modelled ahead of
+              fabrication.</li>
+          <li>Engineering the aircraft to lift and carry a payload using a
+              dedicated arm, sizing the structure around the added weight and
+              reach.</li>
+          <li>Running CFD analysis to pinpoint drag and airflow inefficiencies
+              and refine the frame geometry for better aerodynamic efficiency
+              and flight stability.</li>
+          <li>Stress testing the payload arm and airframe under load to confirm
+              the structure holds up before moving to fabrication.</li>
+          <li>Documenting each iteration with complete CAD models and
+              engineering drawings to support repeatable builds and future
+              revisions.</li>
+        </ul>
+        <div class="toolrow">
+          <span>CAD</span><span>CFD</span><span>Stress analysis</span><span>Payload arm</span><span>In progress</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2026 — Present</div>
+      <div>
+        <h3>Propeller Rocket</h3>
+        <div class="org">Personal project · Just started</div>
+        <ul>
+          <li>Beginning design work on a propeller-driven rocket — defining the
+              concept and requirements and laying out the early airframe.</li>
+        </ul>
+        <div class="toolrow">
+          <span>CAD</span><span>Early design</span><span>In progress</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2024</div>
+      <div>
+        <h3>Magic Mirror Smart Display</h3>
+        <div class="org">Personal project</div>
+        <ul>
+          <li>Built a two-way "magic mirror" smart display from scratch,
+              integrating hardware and software into a custom-housed unit.</li>
+          <li>Handled the wiring, soldering, and assembly, troubleshooting
+              connections to deliver a reliable display surfacing real-time
+              information.</li>
+        </ul>
+        <div class="toolrow">
+          <span>Hardware</span><span>Soldering</span><span>Assembly</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <h2 style="margin-top:44px">Experience</h2>
+
+    <div class="entry">
+      <div class="when">2025 — Present</div>
+      <div>
+        <h3>Founder &amp; Operator</h3>
+        <div class="org">Independent E-Commerce Business</div>
+        <ul>
+          <li>Founded and scaled a self-run e-commerce operation, sourcing
+              inventory in bulk and distributing to wholesale buyers while
+              managing the full cycle from procurement to fulfillment.</li>
+          <li>Built and deployed automated purchasing systems backed by proxy
+              infrastructure to remove manual bottlenecks in high-volume buying.</li>
+          <li>Kept complete books — tracking revenue, costs, and margins — to
+              maintain accurate financial records and sustained profitability.</li>
+          <li>Coordinated logistics and verified fulfillment across every order,
+              resolving shipping discrepancies to protect margins and buyer
+              relationships.</li>
+        </ul>
+        <div class="toolrow">
+          <span>Automation</span><span>Bookkeeping</span><span>Logistics</span><span>Excel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2023 — 2025</div>
+      <div>
+        <h3>Machine Operator &amp; General Labour</h3>
+        <div class="org">Thaler Metal Industries Ltd.</div>
+        <ul>
+          <li>Fabricated and assembled metal components to strict quality
+              standards, operating production machinery to technical
+              specifications and consistently holding tolerances.</li>
+          <li>Carried out physical fit-up of parts and sub-assemblies alongside
+              in-process quality inspection, reducing rework.</li>
+          <li>Supported facility-wide labour demands, maintaining safety and
+              reliability in a fast-paced industrial environment.</li>
+        </ul>
+        <div class="toolrow">
+          <span>Machining</span><span>Metal assembly</span><span>Quality inspection</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Jun — Sept 2021</div>
+      <div>
+        <h3>Junior Web Developer (Intern)</h3>
+        <div class="org">Web Design Paradigm</div>
+        <ul>
+          <li>Designed, prototyped, and deployed custom WordPress websites on
+              deadline, configuring plugins for contact forms, galleries, and
+              analytics.</li>
+          <li>Ran front-end UI/UX testing and communicated directly with clients
+              to deliver on-spec work on schedule.</li>
+        </ul>
+        <div class="toolrow">
+          <span>WordPress</span><span>UI/UX</span><span>Front-end</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ LEADERSHIP ============ -->
+    <h2 style="margin-top:44px">Leadership &amp; Activities</h2>
+    <div class="entry">
+      <div class="when">2022 — 2024</div>
+      <div>
+        <h3>Student Executive Roles</h3>
+        <div class="org">Stephen Lewis Secondary School</div>
+        <ul>
+          <li>Held finance and executive positions across the Student Activity
+              Council, Athletic Council, STEM Club, and badminton team, managing
+              combined budgets with Excel-based tracking and variance reviews.</li>
+          <li>Co-launched a "Women in STEM" initiative, coordinating speakers,
+              marketing, and logistics to grow event participation.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Joshua Song</span>
+      <span><a href="mailto:song.joshua06@gmail.com">song.joshua06@gmail.com</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>

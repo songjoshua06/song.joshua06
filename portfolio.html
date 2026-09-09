@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Joshua Song</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">Joshua Song</a>
+      <div class="links">
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="wrap section-sm" style="padding-top:56px">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Projects</h1>
+    <p class="lead">A look at what I'm building. I'll add projects here as they
+      come together.</p>
+  </header>
+
+  <!-- ============ PROJECT GRID ============ -->
+  <section class="wrap" style="padding-top:12px">
+    <div class="grid">
+
+      <!-- ===== YOUR PROJECT ===== -->
+      <article class="card">
+        <div class="thumb">
+          <!-- IMAGE: drop your photo into the images folder and point src at it.
+               Right now it uses images/quadcopter.jpg -->
+          <img src="images/quadcopter.jpg" alt="Quadcopter" />
+        </div>
+        <div class="body">
+          <span class="tag">In progress</span>
+          <h3>Quadcopter</h3>
+          <!-- EDIT: write your own blurb here -->
+          <p>Write a short description of your quadcopter here.</p>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           ADD ANOTHER PROJECT
+           Copy the whole <article> ... </article> block below, paste it just
+           above this note, then:
+             1. Put your image in the "images" folder (e.g. images/rocket.jpg)
+             2. Change src="..." to match your image's file name
+             3. Change the tag, the title, and the blurb
+           ====================================================================
+      <article class="card">
+        <div class="thumb">
+          <img src="images/your-image.jpg" alt="Project name" />
+        </div>
+        <div class="body">
+          <span class="tag">Category</span>
+          <h3>Project title</h3>
+          <p>Write a short description of the project here.</p>
+        </div>
+      </article>
+           ==================================================================== -->
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Joshua Song</span>
+      <span><a href="mailto:song.joshua06@gmail.com">song.joshua06@gmail.com</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>

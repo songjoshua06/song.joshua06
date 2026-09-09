@@ -1,0 +1,285 @@
+/* =====================================================================
+   PORTFOLIO SITE — SHARED STYLES
+   ---------------------------------------------------------------------
+   You rarely need to touch this file. The two things people usually
+   want to change live right here at the top:
+     1. Colors  -> edit the values under :root below
+     2. Fonts   -> change the two --font- lines, and the <link> in the
+                   <head> of each .html page
+   ===================================================================== */
+
+:root {
+  /* --- Colors (change these to re-skin the whole site) --- */
+  --paper:      #FBFAF7;   /* page background        */
+  --ink:        #23211E;   /* main text              */
+  --muted:      #6B6862;   /* secondary / faded text */
+  --accent:     #3A5A40;   /* links, highlights      */
+  --accent-ink: #2b4530;   /* darker accent for hover*/
+  --wash:       #EEF1EA;   /* soft panel background   */
+  --line:       #E4E1DA;   /* hairline borders        */
+
+  /* --- Fonts --- */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:    "Inter", -apple-system, Segoe UI, Roboto, sans-serif;
+
+  --maxw: 1080px;
+}
+
+/* --- Base --- */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;  /* stop iOS from resizing text on rotate */
+  overflow-x: hidden;              /* no accidental sideways scroll on phones */
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 560;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4em;
+}
+
+h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+h3 { font-size: 1.2rem; font-weight: 600; }
+
+p { margin: 0 0 1em; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-ink); text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+/* --- Top navigation (shared on every page) --- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.nav .brand {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.nav .brand:hover { text-decoration: none; }
+.nav .links { display: flex; gap: 26px; }
+.nav .links a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav .links a:hover { color: var(--ink); text-decoration: none; }
+.nav .links a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* --- Generic section spacing --- */
+section { padding: 72px 0; }
+.section-sm { padding: 40px 0; }
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+.lead { font-size: 1.22rem; color: var(--ink); max-width: 62ch; }
+.muted { color: var(--muted); }
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+.btn:hover { background: var(--accent-ink); color: #fff; text-decoration: none; }
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+.btn.ghost:hover { background: var(--wash); color: var(--accent-ink); }
+
+/* --- HOME: hero --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  padding: 80px 0 72px;
+}
+.hero .photo {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 5;
+}
+.hero .photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero .actions { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+
+/* --- Two-column about block --- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  border-top: 1px solid var(--line);
+  padding-top: 56px;
+}
+.about ul { margin: 0; padding-left: 18px; }
+.about li { margin-bottom: 8px; }
+
+/* --- PORTFOLIO grid --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(35,33,30,0.08); }
+.card .thumb { aspect-ratio: 4 / 3; overflow: hidden; background: var(--wash); }
+.card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.card .body { padding: 20px 22px 24px; }
+.card .body h3 { margin-bottom: 6px; }
+.card .tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--wash);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.card .body p { color: var(--muted); font-size: 0.97rem; margin: 0; }
+
+/* --- RESUME --- */
+.resume-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+}
+.resume-head .contact { color: var(--muted); font-size: 0.95rem; text-align: right; }
+.resume-head .contact a { color: var(--muted); }
+
+.entry {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.entry .when { color: var(--muted); font-size: 0.92rem; padding-top: 3px; }
+.entry h3 { margin-bottom: 2px; }
+.entry .org { color: var(--accent); font-size: 0.98rem; margin-bottom: 10px; }
+.entry ul { margin: 0; padding-left: 18px; }
+.entry li { margin-bottom: 6px; color: var(--muted); }
+
+.skills { display: flex; flex-wrap: wrap; gap: 10px; }
+.skills span {
+  background: var(--wash);
+  border: 1px solid var(--line);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+}
+
+/* --- Footer --- */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+/* --- Mobile --- */
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 48px; }
+  .hero .photo { max-width: 340px; }
+  .about { grid-template-columns: 1fr; gap: 28px; }
+  .grid { grid-template-columns: 1fr; }
+  .entry { grid-template-columns: 1fr; gap: 6px; }
+  .entry .when { padding-top: 0; }
+  .nav .links { gap: 16px; }
+  .nav .brand { white-space: nowrap; }        /* name never breaks across lines */
+  .resume-head { align-items: flex-start; }
+  .resume-head .contact { text-align: left; } /* contact reads naturally when stacked */
+  section { padding: 52px 0; }
+}
+
+/* --- Small phones (under ~430px): stack the top bar into two tidy rows
+       so the name and menu never crowd each other --- */
+@media (max-width: 430px) {
+  .nav .wrap {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .nav .brand { font-size: 1.05rem; }
+  .nav .links { gap: 22px; }
+  .nav .links a { padding: 6px 0; }           /* comfortable tap targets */
+  h1 { font-size: clamp(2.2rem, 9vw, 2.8rem); }
+  .actions { width: 100%; }
+  .actions .btn { flex: 1; text-align: center; }  /* full-width, thumb-friendly buttons */
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Print (so the Resume page prints cleanly to PDF) */
+@media print {
+  .nav, footer, .no-print { display: none !important; }
+  body { font-size: 12px; }
+  .entry { break-inside: avoid; }
+}
