@@ -3,160 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quadcopter Frame — Joshua Song</title>
+
+  <!-- ==== EDIT: your name / page title (shows on the browser tab) ==== -->
+  <title>Joshua Song — Portfolio</title>
 
   <link rel="stylesheet" href="style.css" />
+  <!-- Fonts (needs internet to load; falls back to system fonts offline) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Styles specific to this project case-study page -->
-  <style>
-    .proj-meta {
-      display: flex; flex-wrap: wrap; gap: 8px 28px;
-      margin-top: 22px; padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted); font-size: 0.95rem;
-    }
-    .proj-meta b { color: var(--ink); font-weight: 600; }
-
-    .stage { padding: 42px 0; border-top: 1px solid var(--line); }
-    .stage:first-of-type { border-top: 0; padding-top: 18px; }
-    .stage .step {
-      color: var(--accent); font-weight: 600;
-      font-size: 0.85rem; letter-spacing: 0.04em; margin-bottom: 10px;
-    }
-    .stage figure {
-      margin: 0 0 22px; border: 1px solid var(--line);
-      border-radius: 12px; overflow: hidden; background: #ededed;
-    }
-    .stage figure img { width: 100%; display: block; }
-    .stage figcaption {
-      font-size: 0.86rem; color: var(--muted);
-      padding: 11px 16px; border-top: 1px solid var(--line); background: #fff;
-    }
-    .stage .txt { max-width: 70ch; }
-
-    .backlink { display: inline-block; margin-top: 6px; color: var(--muted); font-size: 0.95rem; }
-    .backlink:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
 
+  <!-- ============ NAVIGATION (same on every page) ============ -->
   <nav class="nav">
     <div class="wrap">
+      <!-- EDIT: your name -->
       <a class="brand" href="index.html">Joshua Song</a>
       <div class="links">
-        <a href="index.html">About</a>
+        <a href="index.html" class="active">About</a>
         <a href="resume.html">Resume</a>
-        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="portfolio.html">Portfolio</a>
       </div>
     </div>
   </nav>
 
-  <!-- ============ PROJECT HEADER ============ -->
-  <header class="wrap" style="padding-top:48px">
-    <a class="backlink" href="portfolio.html">← Back to projects</a>
-    <p class="eyebrow" style="margin-top:18px">Project</p>
-    <h1>Quadcopter Frame — Structural Design &amp; FEA</h1>
-    <p class="lead">
-      An iterative quadcopter frame I designed in SolidWorks and refined with
-      finite-element analysis. Working within the material I had available, I
-      used simulation to find the frame's structural weak points, then
-      redesigned it to be stiffer and better balanced before printing.
-    </p>
-    <div class="proj-meta">
-      <span><b>Role:</b> Solo project</span>
-      <span><b>Tools:</b> SolidWorks, FEA (static structural)</span>
-      <span><b>Year:</b> 2026</span>
-      <span><b>Status:</b> Built &amp; flying</span>
+  <!-- ============ HERO ============ -->
+  <header class="wrap hero">
+    <div>
+      <p class="eyebrow">Aerospace &amp; Mechanical Engineering Student</p>
+      <!-- EDIT: your headline -->
+      <h1>Hi, I'm Joshua.</h1>
+      <p class="lead">
+        I'm a third-year Aerospace Engineering student at Toronto Metropolitan
+        University. I design things in CAD, simulate how they'll behave, and
+        then actually build them — competition rockets, payload-carrying
+        drones, and whatever else I can get onto a workbench.
+      </p>
+      <div class="actions">
+        <a class="btn" href="portfolio.html">See my work</a>
+        <a class="btn ghost" href="resume.html">View resume</a>
+      </div>
+    </div>
+
+    <!-- PHOTO: to change it, replace images/profile.jpg (keep the name) -->
+    <div class="photo">
+      <img src="images/profile.jpg" alt="Portrait of Joshua Song" />
     </div>
   </header>
 
+  <!-- ============ ABOUT ============ -->
   <section class="wrap">
-
-    <!-- ===== STAGE 1 ===== -->
-    <div class="stage">
-      <p class="step">01 · PROTOTYPE</p>
-      <h2>First prototype</h2>
-      <figure>
-        <img src="images/quad-prototype-1.jpg" alt="First quadcopter frame prototype, CAD render" />
-        <figcaption>Iteration 1 — the initial frame, built from material on hand.</figcaption>
-      </figure>
-      <p class="txt">
-        The first prototype was built from the material I had available and kept
-        deliberately simple. The tolerancing was off and several features weren't
-        made to spec, and the frame carried more bulk material than it needed.
-        Under load it flexed in a few different areas — which, more usefully,
-        pointed to where the major stress concentrations actually were.
-      </p>
+    <div class="about">
+      <div>
+        <p class="eyebrow">About me</p>
+        <h2>A bit about me</h2>
+      </div>
+      <div>
+        <!-- EDIT: your story -->
+        <p>
+          I'm drawn to the part of engineering where an idea on a screen turns
+          into something that actually flies. Most of my projects follow the
+          same loop — model it in CAD, simulate the aerodynamics and loads,
+          build it, then work out what to improve on the next version. Right
+          now that's a competition rocket airframe with the TMU MARS team and a
+          payload-carrying quadcopter I'm designing from scratch.
+        </p>
+        <p>
+          Outside of coursework I've fabricated and assembled metal parts to
+          tolerance on a production floor, and I run a small e-commerce business
+          end to end — which has taught me as much about logistics and
+          follow-through as any class. I'm currently looking for a Summer 2027
+          internship in aerospace or mechanical engineering.
+        </p>
+        <h3 style="margin-top:22px">What I do</h3>
+        <ul>
+          <li>CAD &amp; mechanical design (SolidWorks, CATIA, Onshape)</li>
+          <li>CFD &amp; aerodynamic analysis</li>
+          <li>Structural &amp; stress analysis</li>
+          <li>Rocketry &amp; flight simulation (OpenRocket, RASAero)</li>
+          <li>Hands-on fabrication &amp; prototyping</li>
+          <li>MATLAB &amp; C for engineering problems</li>
+        </ul>
+      </div>
     </div>
-
-    <!-- ===== STAGE 2 ===== -->
-    <div class="stage">
-      <p class="step">02 · ANALYSIS</p>
-      <h2>Finding the weak points with FEA</h2>
-      <figure>
-        <img src="images/quad-fea.jpg" alt="Finite-element static displacement study of the frame" />
-        <figcaption>
-          Static displacement study (inertial relief). Red/orange marks the
-          largest deflection, blue is near zero — peak displacement ≈ 7.8&nbsp;mm.
-        </figcaption>
-      </figure>
-      <p class="txt">
-        Rather than guess at the problem areas, I ran a rudimentary
-        finite-element study — a static displacement analysis using inertial
-        relief — on the frame, with the material properties I was working with.
-        The simulation made the weak points obvious: deflection peaked at the
-        motor arms and outer mounts (shown in red and orange) while the central
-        body stayed stiff (blue). That gave me specific, ranked targets for the
-        redesign instead of reinforcing everything blindly.
-      </p>
-    </div>
-
-    <!-- ===== STAGE 3 ===== -->
-    <div class="stage">
-      <p class="step">03 · REDESIGN</p>
-      <h2>Final design, print-ready</h2>
-      <figure>
-        <img src="images/quad-final.jpg" alt="Final redesigned quadcopter frame, CAD render" />
-        <figcaption>Iteration 2 — reinforced at the flagged stress points, with material rebalanced to cut bending.</figcaption>
-      </figure>
-      <p class="txt">
-        For the second iteration I addressed each point the analysis flagged. I
-        reinforced the stress concentrations the study identified, redistributed
-        material to bring down the peak stresses, and added extra material in the
-        sections that had been bending to stiffen them. The result is the
-        print-ready frame — stronger where it needs to be, without the dead
-        weight of the first version.
-      </p>
-    </div>
-
-    <!-- ===== STAGE 4 ===== -->
-    <div class="stage">
-      <p class="step">04 · BUILT</p>
-      <h2>Final realized prototype</h2>
-      <figure>
-        <img src="images/quad-built.jpg" alt="The printed and fully built quadcopter, with radio controller and battery" />
-        <figcaption>The printed frame built into a complete, flying quad — brushless motors, flight-controller and ESC stack, receiver, and radio link.</figcaption>
-      </figure>
-      <p class="txt">
-        This is the design realized: the optimized frame printed and built up
-        into a complete, flying quad. I assembled the full stack onto it — the
-        brushless motors, the flight-controller and ESC, the receiver, and the
-        power — all mounted on the frame the analysis shaped. Seeing it hold up
-        in the air is the payoff of the stress study and redesign: the
-        reinforced frame takes the vibration and landing loads that bent the
-        first version.
-      </p>
-    </div>
-
-    <a class="backlink" href="portfolio.html" style="margin:8px 0 10px">← Back to projects</a>
   </section>
 
+  <!-- ============ FOOTER ============ -->
   <footer>
     <div class="wrap">
       <span>© 2026 Joshua Song</span>
+      <!-- EDIT: your email / links -->
       <span><a href="mailto:song.joshua06@gmail.com">song.joshua06@gmail.com</a></span>
     </div>
   </footer>
