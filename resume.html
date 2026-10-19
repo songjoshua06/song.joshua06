@@ -10,10 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- ============================================================
-       Extra styles just for this richer resume page.
-       (Kept here so the other pages are untouched.)
-       ============================================================ -->
   <style>
     .bio { font-size: 1.14rem; line-height: 1.6; max-width: 66ch; margin: 18px 0 0; }
     .contactbar {
@@ -27,13 +23,11 @@
     .contactbar .dot { color: var(--line); }
     .contactbar .grow { flex: 1; }
 
-    /* Grouped skills — clearer than one long row of pills */
     .skill-group { display: grid; grid-template-columns: 200px 1fr; gap: 8px 24px; padding: 10px 0; border-bottom: 1px solid var(--line); }
     .skill-group:last-child { border-bottom: 0; }
     .skill-group .label { font-weight: 600; color: var(--ink); }
     .skill-group .val { color: var(--muted); }
 
-    /* Small "tools used" tags under a project */
     .toolrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .toolrow span {
       background: var(--wash); border: 1px solid var(--line);
@@ -60,7 +54,6 @@
     </div>
   </nav>
 
-  <!-- ============ HEADER + BIO ============ -->
   <header class="wrap" style="padding-top:52px">
     <p class="eyebrow">Resume</p>
     <h1>Joshua Song</h1>
@@ -68,7 +61,6 @@
       Aerospace Engineering Student · Toronto Metropolitan University
     </p>
 
-    <!-- EDIT: your bio / intro -->
     <p class="bio">
       I'm a third-year Aerospace Engineering student who likes to design
       things and then actually build them. My work runs from competition
@@ -78,7 +70,6 @@
       I can turn CAD and analysis into real, working hardware.
     </p>
 
-    <!-- EDIT: your contact + links. Add your real LinkedIn URL. -->
     <div class="contactbar">
       <a href="mailto:song.joshua06@gmail.com">song.joshua06@gmail.com</a>
       <span class="dot">·</span>
@@ -94,7 +85,6 @@
 
   <section class="wrap">
 
-    <!-- ============ EDUCATION ============ -->
     <h2>Education</h2>
     <div class="entry">
       <div class="when">2024 — 2029</div>
@@ -103,14 +93,13 @@
         <div class="org">Toronto Metropolitan University · Toronto, ON</div>
         <ul>
           <li>Currently in third year; expected graduation 2029.</li>
-          <!-- EDIT: swap in the courses you've actually taken -->
+
           <li>Relevant coursework: Thermodynamics, Fluid Mechanics, Solid
               Mechanics, Engineering Design, Programming for Engineers.</li>
         </ul>
       </div>
     </div>
 
-    <!-- ============ SKILLS ============ -->
     <h2 style="margin-top:40px">Technical Skills</h2>
     <div style="border-top:1px solid var(--line); margin-top:8px">
       <div class="skill-group">
@@ -135,7 +124,6 @@
       </div>
     </div>
 
-    <!-- ============ PROJECTS ============ -->
     <h2 style="margin-top:44px">Projects</h2>
 
     <div class="entry">
@@ -243,7 +231,6 @@
       </div>
     </div>
 
-    <!-- ============ EXPERIENCE ============ -->
     <h2 style="margin-top:44px">Experience</h2>
 
     <div class="entry">
@@ -307,7 +294,6 @@
       </div>
     </div>
 
-    <!-- ============ LEADERSHIP ============ -->
     <h2 style="margin-top:44px">Leadership &amp; Activities</h2>
     <div class="entry">
       <div class="when">2022 — 2024</div>
