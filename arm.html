@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanical Arm — Joshua Song</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    .proj-meta {
+      display: flex; flex-wrap: wrap; gap: 8px 28px;
+      margin-top: 22px; padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.95rem;
+    }
+    .proj-meta b { color: var(--ink); font-weight: 600; }
+
+    .stage { padding: 42px 0; border-top: 1px solid var(--line); }
+    .stage:first-of-type { border-top: 0; padding-top: 18px; }
+    .stage .step {
+      color: var(--accent); font-weight: 600;
+      font-size: 0.85rem; letter-spacing: 0.04em; margin-bottom: 10px;
+    }
+    .stage figure {
+      margin: 0 0 22px; border: 1px solid var(--line);
+      border-radius: 12px; overflow: hidden; background: #ededed;
+    }
+    .stage figure img, .stage figure video { width: 100%; display: block; }
+    .stage figcaption {
+      font-size: 0.86rem; color: var(--muted);
+      padding: 11px 16px; border-top: 1px solid var(--line); background: #fff;
+    }
+    .stage .txt { max-width: 70ch; }
+
+    .specs { list-style: none; padding: 0; margin: 4px 0 0; max-width: 560px; }
+    .specs li { display: flex; justify-content: space-between; gap: 16px; padding: 11px 2px; border-bottom: 1px solid var(--line); }
+    .specs li span:first-child { color: var(--muted); }
+    .specs li span:last-child { font-weight: 600; color: var(--ink); text-align: right; }
+
+    .backlink { display: inline-block; margin-top: 6px; color: var(--muted); font-size: 0.95rem; }
+    .backlink:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">Joshua Song</a>
+      <div class="links">
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="wrap" style="padding-top:48px">
+    <a class="backlink" href="portfolio.html">← Back to projects</a>
+    <p class="eyebrow" style="margin-top:18px">Project</p>
+    <h1>Mechanical Arm — Industrial Build</h1>
+    <p class="lead">
+      The start of a ground-up rebuild of a mechanical arm for industrial use.
+      I'm beginning with the gripper — currently built as a single
+      degree-of-freedom mechanism, with a second DOF next — and working toward a
+      full 7-DOF arm.
+    </p>
+    <div class="proj-meta">
+      <span><b>Role:</b> Hardware &amp; mechanical build lead</span>
+      <span><b>Team:</b> Multidisciplinary, with master's students</span>
+      <span><b>Tools:</b> Onshape, CAD</span>
+      <span><b>Status:</b> In progress — gripper rebuild</span>
+      <span><b>Target:</b> 7-DOF arm</span>
+    </div>
+  </header>
+
+  <section class="wrap">
+
+    <div class="stage">
+      <p class="step">01 · GRIPPER</p>
+      <h2>Rebuilding the gripper</h2>
+      <figure>
+        <video src="images/arm-gripper.mp4" poster="images/arm-gripper-poster.jpg"
+               controls playsinline muted loop preload="metadata"></video>
+        <figcaption>The gripper mechanism in CAD — geared jaws actuating as a single degree of freedom.</figcaption>
+      </figure>
+      <p class="txt">
+        I'm rebuilding the arm from the ground up for industrial use, starting at
+        the business end: the gripper. The current design is a single
+        degree-of-freedom mechanism — a geared linkage that drives both jaws
+        together from one actuator. It's the first subsystem in the rebuild, and
+        getting the gripper's motion and geometry right is the foundation for
+        everything mounted behind it.
+      </p>
+      <p class="txt">
+        This is a multidisciplinary project — I'm currently working alongside a
+        group of master's students to build it. I lead the hardware and
+        mechanical side, owning the design and physical build of the gripper and
+        arm, while the software and control work is handled by the master's
+        students.
+      </p>
+    </div>
+
+    <div class="stage">
+      <p class="step">02 · WHAT'S NEXT</p>
+      <h2>Toward a full 7-DOF arm</h2>
+      <ul class="specs">
+        <li><span>Gripper — now</span><span>1 DOF</span></li>
+        <li><span>Gripper — next</span><span>2 DOF</span></li>
+        <li><span>Full arm — target</span><span>7 DOF</span></li>
+      </ul>
+      <p class="txt" style="margin-top:22px">
+        Next, the gripper moves from one degree of freedom to two, adding a
+        second independent motion for more control over how it grasps. From
+        there the build scales up to the full arm — a 7-DOF design that gives it
+        the reach and dexterity of an industrial manipulator. This page will grow
+        as each stage comes together.
+      </p>
+    </div>
+
+    <a class="backlink" href="portfolio.html" style="margin:8px 0 10px">← Back to projects</a>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Joshua Song</span>
+      <span><a href="mailto:song.joshua06@gmail.com">song.joshua06@gmail.com</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
