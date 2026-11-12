@@ -63,17 +63,17 @@
     <p class="eyebrow" style="margin-top:18px">Project</p>
     <h1>Mechanical Arm — Industrial Build</h1>
     <p class="lead">
-      A ground-up rebuild of a mechanical arm for industrial use. I'm starting
-      at the gripper — now on its second iteration, a three-point claw — and
-      building toward housings, embedded tech, a second degree of freedom, and
-      ultimately a full 7-DOF arm.
+      A ground-up rebuild of a mechanical arm for industrial use. Starting from
+      the gripper, the design has grown into a fully articulated 7-DOF arm — now
+      a working CAD prototype. Next is specifying the real drivetrain with the
+      team and building a 1:1 physical model.
     </p>
     <div class="proj-meta">
       <span><b>Role:</b> Hardware &amp; mechanical build lead</span>
       <span><b>Team:</b> Multidisciplinary, with master's students</span>
       <span><b>Tools:</b> Onshape, CAD</span>
-      <span><b>Status:</b> In progress — gripper rebuild</span>
-      <span><b>Target:</b> 7-DOF arm</span>
+      <span><b>Status:</b> Working CAD prototype — full 7-DOF articulation</span>
+      <span><b>Next:</b> Actuator specs &amp; 1:1 build</span>
     </div>
   </header>
 
@@ -121,21 +121,39 @@
     </div>
 
     <div class="stage">
-      <p class="step">03 · WHAT'S NEXT</p>
-      <h2>Toward a full armature</h2>
+      <p class="step">03 · PROTOTYPE</p>
+      <h2>Full 7-DOF CAD prototype</h2>
+      <figure>
+        <video src="images/arm-7dof.mp4" poster="images/arm-7dof-poster.jpg"
+               controls playsinline muted loop preload="metadata"></video>
+        <figcaption>Working CAD prototype — the full arm articulating through all seven degrees of freedom, with the three-point claw as the end effector.</figcaption>
+      </figure>
+      <p class="txt">
+        The claw now sits at the end of a complete, fully articulated arm. This
+        working CAD prototype has the full seven degrees of freedom modelled and
+        moving — the arm can reach, orient, and position the end effector exactly
+        as an industrial manipulator would. Every joint and linkage is defined, so
+        the geometry and range of motion are proven out in CAD before any hardware
+        is committed.
+      </p>
+    </div>
+
+    <div class="stage">
+      <p class="step">04 · WHAT'S NEXT</p>
+      <h2>From CAD to a 1:1 build</h2>
       <ul class="specs">
-        <li><span>Gripper — now</span><span>1 DOF</span></li>
-        <li><span>Gripper — target</span><span>2 DOF</span></li>
-        <li><span>Full arm — target</span><span>7 DOF</span></li>
+        <li><span>Three-point claw</span><span>Modelled</span></li>
+        <li><span>Full-arm articulation</span><span>7 DOF — in CAD</span></li>
+        <li><span>Physical build</span><span>1:1 — next</span></li>
       </ul>
       <p class="txt" style="margin-top:22px">
-        From here the plan is to design proper housings for the claw's drivetrain
-        and electronics, and to rework the finger geometry to make room for
-        embedded sensing and actuation — building toward a smarter, self-contained
-        end effector. In parallel I'm developing a second degree of freedom for
-        the claw, giving it independent wrist-style motion on top of the grip.
-        Once the end effector is solid, the build scales up to the full armature —
-        a 7-DOF arm with the reach and dexterity of an industrial manipulator.
+        The motors in the current model are placeholders — the next step is
+        specifying the real drivetrain with the team. That means working out the
+        torque required at each joint, sizing the servos and stepper motors to
+        match, and checking how the design scales while accounting for added
+        payload like sensors and cameras on the arm. Once those specs are locked
+        in, the model is ready to become a full 1:1 working build, with purpose-made
+        housings for the motors, electronics, and wiring.
         This page will grow as each stage comes together.
       </p>
     </div>
